@@ -1,6 +1,8 @@
 # Logistics Label Batch Printer
 
-新的 Chrome MV3 擴充功能，用於整理並批次列印全家 FamilyMart 與 7-11 物流標籤。
+> Chrome 擴充功能，一鍵整理並批次列印全家 FamilyMart 與 7-11 物流標籤。自動略過空白標籤、重排版面、觸發列印。
+
+![demo](assets/demo.gif)
 
 ## 功能
 
