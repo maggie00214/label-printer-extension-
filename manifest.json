@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Logistics Label Batch Printer",
+  "description": "Batch print FamilyMart and 7-Eleven logistics labels with cleaner print layouts.",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://external2.shopee.tw/ext/familymart/*",
+        "http://external2.shopee.tw/ext/familymart/*",
+        "https://api.sls.shopee.tw/api/logistic/familymart/shipping_label*",
+        "https://mybid.ruten.com.tw/deliver/famimart_shipping_order_preview.php*",
+        "https://mybid.ruten.com.tw/deliver/iw_shipping_order_display.php*",
+        "https://mybid.ruten.com.tw/deliver/sel_cvs_store.php?t_no=*",
+        "https://ecfme.famiport.com.tw/*",
+        "https://ecfme.fme.com.tw/*",
+        "https://logistic.paynow.com.tw/Member/Order/PrintFamiC2CLabel*",
+        "https://famistore.familynet.com.tw/*/openwin/family_c2c_od_print_delegate.php*",
+        "https://famistore.famiport.com.tw/*/openwin/family_c2c_od_print_delegate.php*"
+      ],
+      "js": [
+        "src/content/print-engine.js",
+        "src/content/familymart.js"
+      ],
+      "css": [
+        "src/styles/common-print.css",
+        "src/styles/familymart-print.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://epayment.7-11.com.tw/C2C/C2CWeb/C2C.aspx",
+        "https://epayment.7-11.com.tw/C2C/C2CWeb/PrintC2CPinCode.aspx",
+        "https://epayment.7-11.com.tw/C2C/C2CWeb/MultiplePrintC2CPinCode.aspx"
+      ],
+      "js": [
+        "src/content/print-engine.js",
+        "src/content/seven-eleven.js"
+      ],
+      "css": [
+        "src/styles/common-print.css",
+        "src/styles/seven-eleven-print.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

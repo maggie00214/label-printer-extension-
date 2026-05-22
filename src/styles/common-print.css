@@ -1,0 +1,26 @@
+.lp-print-root {
+  margin: 0 !important;
+  background: #ffffff !important;
+}
+
+.lp-print-page,
+.lp-seven-page {
+  break-after: page;
+  page-break-after: always;
+  overflow: hidden;
+}
+
+.lp-print-page:last-child,
+.lp-seven-page:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+@media print {
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+}

@@ -1,0 +1,30 @@
+.lp-familymart-label {
+  display: block;
+  width: calc(10cm * var(--lp-familymart-scale, 0.9));
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: normal;
+}
+
+.lp-familymart-famiport {
+  background: #ffffff;
+}
+
+@page {
+  size: 10cm 14cm;
+  margin: 0;
+}
+
+@media print {
+  .lp-print-page {
+    width: 10cm;
+    min-height: 14cm;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .lp-familymart-label {
+    width: calc(10cm * var(--lp-familymart-scale, 0.9)) !important;
+  }
+}

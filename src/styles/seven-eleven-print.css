@@ -1,0 +1,23 @@
+.lp-seven-page {
+  box-sizing: border-box;
+  width: 298px;
+  min-height: 460px;
+  margin: 10px;
+  padding: 0 2px;
+  border: 2px solid #000000;
+  background: #ffffff;
+}
+
+.lp-seven-page .div_frame {
+  margin: 0 !important;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  .lp-seven-page {
+    margin: 0 !important;
+  }
+}
